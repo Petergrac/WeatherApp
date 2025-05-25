@@ -15,6 +15,7 @@ const country = document.querySelector('.country');
 const weatherState = document.querySelector('.weather-state');
 const yourRegion = document.querySelector('.region');
 const upcomingDays = document.querySelector('.upcoming--days');
+const form = document.querySelector('.form');
 function getPosition() {
   return new Promise((resolve, reject) => {
     navigator.geolocation.getCurrentPosition(resolve, reject);
@@ -93,6 +94,11 @@ manlocate.addEventListener('click', (e) => {
   e.preventDefault();
   switchUI();
   const value = input.value;
-  console.log(value);
-  getWeatherInfo(value);
+  if (value === '') {
+    getWeatherInfo('');
+  } else {
+    console.log(value);
+    getWeatherInfo(value);
+  }
+  form.reset();
 });

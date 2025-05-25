@@ -6,7 +6,7 @@
 }
 .header {
   display: flex;
-  height: 15vh;
+  height: 13vh;
   justify-content: center;
   align-items: center;
   font-size: 3.7rem;
@@ -18,7 +18,7 @@
   display: none;
   display: flex;
   flex-direction: column;
-  height: 85vh;
+  height: 80vh;
   background: linear-gradient(80deg, #2e9cbb, #021832);
   border-radius: 1.9%;
 }
@@ -138,4 +138,12 @@ input{
 .temp_time  p,.country--info p{
   display: flex;
   justify-content: start;
+}
+footer{
+  display: flex;
+  justify-content: center;
+  background: #075742;
+  font-size: 1.4em;
+  font-weight: bold;
+  border-radius: 10px;
 }
