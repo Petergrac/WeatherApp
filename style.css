@@ -1,0 +1,141 @@
+:root {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.header {
+  display: flex;
+  height: 15vh;
+  justify-content: center;
+  align-items: center;
+  font-size: 3.7rem;
+  font-weight: bold;
+  background: linear-gradient(to right, #3bacac, #000000);
+  border-bottom: #00f9bf solid 8px;
+}
+.container {
+  display: none;
+  display: flex;
+  flex-direction: column;
+  height: 85vh;
+  background: linear-gradient(80deg, #2e9cbb, #021832);
+  border-radius: 1.9%;
+}
+
+/* Today's Weather Information */
+.icon {
+  width: 180px;
+}
+.smallIcon {
+  width: 90px;
+}
+.today {
+  display: flex;
+  border-bottom: #00f9bf solid 13px;
+  border-radius: 15px;
+  justify-content: space-between;
+}
+.state,
+.temp-info {
+  border-left: #00f9bf solid 5px;
+  border-radius: 10px;
+  padding-left: 1.2rem;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+.weather-state {
+  font-size: 2.5rem;
+  padding-left: 2.5rem;
+}
+.temp-info {
+  margin-left: 3rem;
+}
+.country--info {
+  margin-left: 3rem;
+  border-left: #00f9bf solid 5px;
+  border-radius: 10px;
+  padding-left: 1.5rem;
+}
+.temperature,
+.time,
+.timezone {
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  font-size: 1.5rem;
+}
+/* Upcoming days */
+.upcoming--days {
+  padding-top: 2rem;
+  display: flex;
+  justify-content: space-around;
+}
+.day p {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+/* Choose the method to find the weather*/
+.choices {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 55vh;
+  background: linear-gradient(270deg, #3bacac, #000000);
+}
+.choose {
+  display: flex;
+  font-size: 2.5rem;
+  font-weight: bold;
+  justify-content: center;
+  background: rgb(35, 55, 64);
+}
+.autodetect {
+  font-size: 1.5rem;
+  border-left: #0cba8c solid 10px;
+  border-right: #0fa8a1 solid 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+}
+.autolocate{
+    width: 150px;
+    height: 50px;
+    border: #2e9cbb solid 2px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, .7);
+    font-size: 1.2rem;
+}
+.autolocate:hover{
+    transform: translateY(2px);
+    background: rgba(0, 0, 0, 0);
+    transition: all .3s ease-in-out;
+}
+.manual-locate{
+    border-left: #00f9bf solid .5rem;
+    padding: 2rem;
+    border-right: #023432 solid .5rem;
+}
+legend{
+    font-size: 1.2rem;
+}
+input{
+    height: 30px;
+    padding-left: 10px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.671);
+    border: 2px rgb(1, 181, 231) solid;
+    font-size: 1.1rem;
+}
+.hidden{
+  display: none;
+}
+.temp_time  p,.country--info p{
+  display: flex;
+  justify-content: start;
+}

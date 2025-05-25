@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js" type="module"></script>
+  </head>
+  <body>
+    <div class="header"><p>Weather App</p></div>
+    <div class="choose">
+        <p>Choose one of the options below</p>
+    </div>
+    <div class="choices">
+      <div class="autodetect">
+        <p>Automatically Detect Your Location</p>
+        <button class="autolocate">GeoLocate</button>
+      </div>
+      <div class="manual-locate">
+        <form action="#">
+          <fieldset>
+            <legend>Enter Your Location</legend>
+            <label for="town">
+              <input class="input" type="text" required placeholder="Your town" />
+            </label>
+            <button id="submit-btn" class="autolocate">Submit</button>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+    <div class="container hidden">
+      <div class="today">
+        <div class="state">
+          <img class="icon" src="#" alt="weather-icon" srcset="" />
+          <p class="weather-state">Loading</p>
+        </div>
+        <div class="temp-info">
+          <div class="temp_time">
+            <p class="temperature">Temp: Loading</p>
+            <p class="time">Time: Loading</p>
+            <p class="timezone town">Town: Loading</p>
+          </div>
+          <div class="country--info">
+            <p class="timezone country">Country: Loading</p>
+            <p class="timezone region">Region: Loading</p>
+            <p class="timezone timeZone">TimeZone: Loading</p>
+          </div>
+        </div>
+      </div>
+      <div class="upcoming--days">
+
+      </div>
+    </div>
+  </body>
+</html>
