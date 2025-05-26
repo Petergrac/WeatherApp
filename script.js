@@ -56,7 +56,7 @@ async function getWeatherInfo(town = '') {
     const zone = weatherData.current.temp_c;
     const zoneF = weatherData.current.temp_f;
     temp.textContent =
-      'Temperature: \n' + zone + ' Degrees/ \n' + zoneF + ' Farenheit';
+      'Temperature:' + zone + '°C || ' + zoneF + 'K';
     const state = weatherData.current.condition.text;
     // Update the background based on weather condition
     if (state.toLowerCase().includes('rain')) {
