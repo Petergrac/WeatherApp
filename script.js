@@ -24,7 +24,7 @@ function getPosition() {
 
 async function getWeatherInfo(town = '') {
   try {
-    document.body.style.backgroundImage = "url('images/default.jpg')";
+    document.body.style.backgroundImage = "url('./images/default.jpg')";
     document.body.style.backgroundSize = 'cover';
     document.body.style.backgroundPosition = 'center';
     document.body.style.backgroundRepeat = 'no-repeat';
@@ -60,15 +60,15 @@ async function getWeatherInfo(town = '') {
     const state = weatherData.current.condition.text;
     // Update the background based on weather condition
     if (state.toLowerCase().includes('rain')) {
-      document.body.style.backgroundImage = "url('images/rainy.jpg')";
+      document.body.style.backgroundImage = "url('./images/rainy.jpg')";
     } else if (state.toLowerCase().includes('sunny')) {
-      document.body.style.backgroundImage = "url('images/sunny.jpg')";
+      document.body.style.backgroundImage = "url('./images/sunny.jpg')";
     } else if (state.toLowerCase().includes('cloudy')) {
-      document.body.style.backgroundImage = "url('images/cloudy.jpg')";
+      document.body.style.backgroundImage = "url('./images/cloudy.jpg')";
     } else if (state.toLowerCase().includes('snow')) {
-      document.body.style.backgroundImage = "url('images/snowy.jpg')";
+      document.body.style.backgroundImage = "url('./images/snowy.jpg')";
     } else if (state.toLowerCase().includes('fog')) {
-      document.body.style.backgroundImage = "url('images/misty.jpg')";
+      document.body.style.backgroundImage = "url('./images/misty.jpg')";
     }
     // Update the weather state text
 
