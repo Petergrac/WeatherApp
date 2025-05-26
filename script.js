@@ -24,7 +24,7 @@ function getPosition() {
 
 async function getWeatherInfo(town = '') {
   try {
-    document.body.style.backgroundImage = "url('images/default.jpg')";
+    await document.body.style.backgroundImage = "url('images/default.jpg')";
     document.body.style.backgroundSize = 'cover';
     document.body.style.backgroundPosition = 'center';
     document.body.style.backgroundRepeat = 'no-repeat';
