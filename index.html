@@ -10,7 +10,7 @@
   <body>
     <div class="header"><p>Weather App</p></div>
     <div class="choose">
-        <p>Choose one of the options below</p>
+      <p>Choose one of the options below</p>
     </div>
     <div class="choices">
       <div class="autodetect">
@@ -18,13 +18,20 @@
         <button class="autolocate">GeoLocate</button>
       </div>
       <div class="manual-locate">
-        <form action="#" class="form"> 
+        <form action="#" class="form">
           <fieldset>
             <legend>Enter Your Location</legend>
             <label for="town">
-              <input class="input" type="text" placeholder="Your town" required/>
+              <input
+                class="input"
+                type="text"
+                placeholder="Your town"
+                required
+              />
             </label>
-            <button id="submit-btn" type="submit" class="autolocate">Submit</button>
+            <button id="submit-btn" type="submit" class="autolocate">
+              Submit
+            </button>
           </fieldset>
         </form>
       </div>
@@ -49,6 +56,13 @@
         </div>
       </div>
       <div class="upcoming--days">
+        <p class="wait">
+          GeoLocate will take quite some time if your internet is slow. Be
+          patient
+        </p>
+        <p class="wait">
+          Reload the Page if there is no results after 10 - 20 seconds
+        </p>
       </div>
     </div>
     <footer>@nemesis</footer>

@@ -19,7 +19,6 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  background: linear-gradient(80deg, #2e9cbb, #021832);
   border-radius: 1.9%;
 }
 
@@ -31,9 +30,11 @@
   width: 90px;
 }
 .today {
+  background: rgba(0, 0, 0, 0.3);
   display: flex;
   border-bottom: #00f9bf solid 13px;
   border-radius: 15px;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 .state,
@@ -51,6 +52,7 @@
   padding-left: 2.5rem;
 }
 .temp-info {
+  /* flex-wrap: wrap; */
   margin-left: 3rem;
 }
 .country--info {
@@ -72,7 +74,13 @@
 .upcoming--days {
   padding-top: 2rem;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
+  background: rgba(0, 0, 0, 0.5);
+}
+.wait {
+  font-size: 1.2rem;
+  color: white;
 }
 .day p {
   font-size: 1.3rem;
@@ -83,6 +91,7 @@
 .choices {
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
   align-items: center;
   height: 55vh;
   background: linear-gradient(270deg, #3bacac, #000000);
@@ -95,6 +104,8 @@
   background: rgb(35, 55, 64);
 }
 .autodetect {
+  display: flex;
+  flex-wrap: wrap;
   font-size: 1.5rem;
   border-left: #0cba8c solid 10px;
   border-right: #0fa8a1 solid 10px;
@@ -103,43 +114,44 @@
   flex-direction: column;
   padding: 10px;
 }
-.autolocate{
-    width: 150px;
-    height: 50px;
-    border: #2e9cbb solid 2px;
-    border-radius: 10px;
-    background: rgba(0, 0, 0, .7);
-    font-size: 1.2rem;
+.autolocate {
+  width: 150px;
+  height: 50px;
+  border: #2e9cbb solid 2px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  font-size: 1.2rem;
 }
-.autolocate:hover{
-    transform: translateY(2px);
-    background: rgba(0, 0, 0, 0);
-    transition: all .3s ease-in-out;
+.autolocate:hover {
+  transform: translateY(2px);
+  background: rgba(0, 0, 0, 0);
+  transition: all 0.3s ease-in-out;
 }
-.manual-locate{
-    border-left: #00f9bf solid .5rem;
-    padding: 2rem;
-    border-right: #023432 solid .5rem;
+.manual-locate {
+  border-left: #00f9bf solid 0.5rem;
+  padding: 2rem;
+  border-right: #023432 solid 0.5rem;
 }
-legend{
-    font-size: 1.2rem;
+legend {
+  font-size: 1.2rem;
 }
-input{
-    height: 30px;
-    padding-left: 10px;
-    border-radius: 10px;
-    background: rgba(0, 0, 0, 0.671);
-    border: 2px rgb(1, 181, 231) solid;
-    font-size: 1.1rem;
+input {
+  height: 30px;
+  padding-left: 10px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.671);
+  border: 2px rgb(1, 181, 231) solid;
+  font-size: 1.1rem;
 }
-.hidden{
+.hidden {
   display: none;
 }
-.temp_time  p,.country--info p{
+.temp_time p,
+.country--info p {
   display: flex;
   justify-content: start;
 }
-footer{
+footer {
   display: flex;
   justify-content: center;
   background: #075742;

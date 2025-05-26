@@ -24,6 +24,10 @@ function getPosition() {
 
 async function getWeatherInfo(town = '') {
   try {
+    document.body.style.backgroundImage = "url('images/default.jpg')";
+    document.body.style.backgroundSize = 'cover';
+    document.body.style.backgroundPosition = 'center';
+    document.body.style.backgroundRepeat = 'no-repeat';
     let weather;
     let url;
     if (town === '') {
@@ -54,6 +58,20 @@ async function getWeatherInfo(town = '') {
     temp.textContent =
       'Temperature: \n' + zone + ' Degrees/ \n' + zoneF + ' Farenheit';
     const state = weatherData.current.condition.text;
+    // Update the background based on weather condition
+    if (state.toLowerCase().includes('rain')) {
+      document.body.style.backgroundImage = "url('images/rainy.jpg')";
+    } else if (state.toLowerCase().includes('sunny')) {
+      document.body.style.backgroundImage = "url('images/sunny.jpg')";
+    } else if (state.toLowerCase().includes('cloudy')) {
+      document.body.style.backgroundImage = "url('images/cloudy.jpg')";
+    } else if (state.toLowerCase().includes('snow')) {
+      document.body.style.backgroundImage = "url('images/snowy.jpg')";
+    } else if (state.toLowerCase().includes('fog')) {
+      document.body.style.backgroundImage = "url('images/misty.jpg')";
+    }
+    // Update the weather state text
+
     weatherState.textContent = state;
     const timezone = weatherData.location.tz_id;
     timeZone.textContent = 'Time Zone: ' + timezone;
@@ -74,6 +92,11 @@ async function getWeatherInfo(town = '') {
     </div>
   `;
     });
+    upcomingDays.innerHTML = ''; // Clear previous content
+    // Insert the new HTML
+    if (daysHtml === '') {
+      daysHtml = '<p class="wait">No upcoming days available.</p>';
+    }
     upcomingDays.innerHTML = daysHtml;
   } catch (error) {
     console.error('Geolocation error:', error);
