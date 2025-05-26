@@ -3,6 +3,8 @@
   margin: 0px;
   padding: 0px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+*{
   color: white;
 }
 .header {
@@ -81,7 +83,6 @@
 }
 .wait {
   font-size: 1.2rem;
-  color: white;
 }
 .day p {
   font-size: 1.3rem;
@@ -122,7 +123,6 @@
   border-radius: 10px;
   background: rgba(0, 0, 0, 0.7);
   font-size: 1.2rem;
-  color : inherit;
 }
 .autolocate:hover {
   transform: translateY(2px);
